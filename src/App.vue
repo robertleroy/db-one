@@ -25,11 +25,12 @@
     </header>
 
     <main>
-      <div>Main</div>
+      <div>Todos</div>
       <div class="list">
         <div class="listItem" :key="i"
             v-for="(item,i) of todos">
-          {{item}}
+          <input type="checkbox" v-model="item.completed">
+          <div class="name">{{item.name}}</div>
         </div>
       </div>
     </main>
