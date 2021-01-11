@@ -29,8 +29,8 @@
       <div class="list">
         <div class="listItem" :key="i"
             v-for="(item,i) of todos">
-          <input type="checkbox" v-model="item.completed">
-          <div class="name">{{item.name}}</div>
+          <!-- <input type="checkbox" v-model="item.completed"> -->
+          <div class="name">{{item}}</div>
         </div>
       </div>
     </main>
