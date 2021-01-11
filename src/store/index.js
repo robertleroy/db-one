@@ -16,7 +16,7 @@ export default createStore({
   },
   actions: {
     async fetchTodos(commit, payload) {      
-      const res = await fetch("/.netlify/functions/pokemon");
+      const res = await fetch("/.netlify/functions/test");
       const data = await res.json();
       commit('setTodos', data)
     }
