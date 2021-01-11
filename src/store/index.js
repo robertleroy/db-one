@@ -16,9 +16,10 @@ export default createStore({
   },
   actions: {
     async fetchTodos(commit) {      
-      const res = await fetch("/.netlify/functions/test");
+      const res = await fetch("https://db-one.netlify.app/.netlify/functions/test");
       const data = await res.json();
-      commit('setTodos', data)
+      console.log(data);
+      commit('setTodos', data);
     }
   },
   modules: {
