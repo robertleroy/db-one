@@ -1,5 +1,25 @@
+<script>
+  export default {
+    name: 'About',
+    data() {
+      return {
+        title: 'About',
+      };
+    },
+    computed: { },
+    methods: { },
+    mounted() { }
+  };
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <section class='About'>
+    {{title}}
+    
+  </section>
 </template>
+
+<style scoped lang='stylus'>
+  @import '../styl/imports';
+
+</style>

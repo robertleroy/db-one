@@ -1,0 +1,34 @@
+// _links.scss v-0.3 //
+
+// #region Links ================== //
+a {
+  // color: var(--linkColor);
+  text-decoration: none;
+  transition: color .1s, background-color .1s;
+  background-color: transparent;
+  outline-width:0;
+  color: var(--linkColor);
+
+  // @extend .btn;
+  
+  // &:link {
+  //   color: var(--linkColor);
+  // }
+  // &:visited {
+  //   color: var(--linkColor);
+  // }
+  &:hover {
+    color: var(--linkHover);
+    text-decoration: underline solid;
+  }
+  &:active {
+    // color: var(--linkActive);
+    text-decoration: underline dotted;
+  }
+}
+
+// >>>> text links.
+p a, li a {
+  text-decoration: none;
+}
+// #endregion Links ================== //

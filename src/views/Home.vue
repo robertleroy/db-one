@@ -1,18 +1,25 @@
+<script>
+  export default {
+    name: 'Home',
+    data() {
+      return {
+        title: 'Home',
+      };
+    },
+    computed: { },
+    methods: { },
+    mounted() { }
+  };
+</script>
+
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section class='Home'>
+    {{title}}
+    
+  </section>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<style scoped lang='stylus'>
+  @import '../styl/imports';
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+</style>

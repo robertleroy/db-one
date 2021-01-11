@@ -1,0 +1,65 @@
+// _baseline.scss v-0.3 // 
+@import "./variables"
+@import "./mixins/mixins"
+// @import "./mixins/shadows"
+
+// #region ROOT ==================== //
+:root 
+  --base: 16px
+  @media (min-width: 480px)
+    --base: 17px
+  
+  @media (min-width: 768px)
+    --base: 18px
+
+  --root: calc( var(--base) * 0.75)
+  --h1: 2.666666667rem
+  --h2: 2.333333333rem
+  --h3: 2rem
+  --h4: 1.666666667rem
+  --h5: 1.5rem
+  --h6: 1.333333333rem
+  --h7: 1.166666667rem
+  --h8: 1rem
+  --h9: 0.889333333rem
+  --lh: 2rem
+
+  --fgColor:#24292e
+  --bgColor: #f7f7f7
+  --headingColor: #333333
+  --linkColor: #0277bd
+  --linkHover:#0277bd
+  --vueGreen: #42b983
+  --vueBlue: #35495E
+
+// #endregion ROOT ==================== //
+
+// @import "./variables"
+// @import "./mixins/mixins"
+// @import "./mixins/shadows"
+
+// ========== region norms ========== //
+
+@import "./norms/normalize"
+@import "./norms/base" 
+@import "./norms/code"
+@import "./norms/forms"
+
+// @import "./norms/links"
+// @import "./norms/lists"
+// @import "./norms/tables"
+@import "./norms/material-icons" 
+// @import "./norms/helpers" 
+// @import "./norms/animations"
+
+// ========== mods ========== //
+// @import "./mods/checkbox"
+// @import "./mods/hljs_gist"
+// @import "./mods/number"
+// @import "./mods/progress"
+// @import "./mods/range"
+// @import "./mods/scrollbar"
+// @import "./mods/select"
+// @import "./mods/tooltip"
+
+// ========== endregion norms ========== //

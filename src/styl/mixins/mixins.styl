@@ -1,0 +1,106 @@
+// _mixins.scss v-0.3 //
+
+@require './shadows';
+// @import './shapes';
+// @import './transforms';
+// @import './functions';
+
+border(w=1px s=solid c=currentColor)
+  border w solid currentColor
+  
+border-radius(r=0.3rem)
+  border-radius r
+
+// border($color:cyan, $style:dotted, $width: 1px) {
+//   border: $width $style $color;
+// }
+
+// media($break) {
+//   @media (min-width: $break) { @content; }
+// }
+
+// media-max($break) {
+//   @media (max-width: $break) { @content; }
+// }
+
+
+// @include absolute(100px, 100px, auto, auto);
+// absolute($top, $right, $bottom, $left) {
+//    position: absolute; 
+//    top: $top;
+//    right: $right;
+//    bottom: $bottom;
+//    left: $left;
+// }
+
+
+// @include ratio(16,9);
+// ratio($x,$y, $pseudo: false) {
+//     $padding: unquote( ( $y / $x ) * 100 + '%' );
+//     @if $pseudo {
+//         &:before {
+//             @include pseudo($pos: relative);
+//             width: 100%;
+//             padding-top: $padding;
+//         }
+//     } @else {
+//         padding-top: $padding;
+//     }
+// }
+
+
+// When using ::before and ::after
+// pseudo($display: inline-block, $pos: absolute, $content: ''){
+//     content: $content;
+//     display: $display;
+//     position: $pos;
+// }
+
+
+// @include prefix(transform, scale3d(2.5, 2, 1.5));
+// prefix($prop, $value) {
+//    -webkit-#{$prop}: #{$value};
+//    -moz-#{$prop}: #{$value};
+//    -ms-#{$prop}: #{$value};
+//    -o-#{$prop}: #{$value};
+//    #{$prop}: #{$value};
+// }
+
+
+truncate($max-wdth) {
+  max-width: $max-wdth;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+media($bp)
+  @media (min-width: $bp)
+    {block}
+
+/* +media(500px)   
+  color: red */
+
+
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  for j in (1..4)
+    if length(args) > i
+      {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+    i += 1
+
+absolute()
+  -pos('absolute', arguments)
+
+fixed()
+  -pos('fixed', arguments)
+
+relative()
+  -pos('relative', arguments)
+
+// .prompt
+//   absolute: top 150px left 5px
+
+// .logo
+//   fixed: top left
