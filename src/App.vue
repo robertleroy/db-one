@@ -1,11 +1,9 @@
-/* App.vue */
-
 <script>
   export default {
     name: 'App',
     data() {
       return {
-        title: "Db-One"
+        title: "Db-One",
       }
     },
     computed: {
