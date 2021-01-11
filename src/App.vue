@@ -12,6 +12,9 @@
       todos() {
         return this.$store.getters.todos;
       }
+    },
+    mounted() {
+      this.$store.dispatch('fetchTodos');
     }
   }
 </script>
