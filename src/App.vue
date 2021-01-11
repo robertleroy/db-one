@@ -7,6 +7,11 @@
       return {
         title: "Db-One"
       }
+    },
+    computed: {
+      todos() {
+        return this.$store.getters.todos;
+      }
     }
   }
 </script>
@@ -20,6 +25,12 @@
 
     <main>
       <div>Main</div>
+      <div class="list">
+        <div class="listItem" :key="i"
+            v-for="(item,i) of todos">
+          {{item}}
+        </div>
+      </div>
     </main>
   </div> 
 </template>
